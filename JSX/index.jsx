@@ -1,5 +1,5 @@
 import React from "react"
 import { render } from "react-dom"
-import Layout from "./Layout/Index"
+import Root from "./Root"
 
-render(<Layout />, document.getElementById("root"))
+render(<Root />, document.getElementById("root"))
