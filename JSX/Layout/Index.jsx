@@ -4,13 +4,10 @@ import {withRouter} from "react-router-dom";
 import Logo from "./Logo";
 import NavigationBar from "./NavigationBar";
 import Router from "../Router/Router";
+import { modules } from "../Common/ModuleName";
 const events = [
     "selectModuleChanged"
 ];
-const modules = {
-    home: "Home",
-    about: "About"
-};
 class Layout extends Component{
     constructor(props){
         super(props);
