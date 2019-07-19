@@ -1,0 +1,45 @@
+.cell-div{
+    width: 300px;
+    height: 130px;
+    border: 1px solid lightgray;
+    background-color: white;
+    border-top: 2px solid black;
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.cell-name{
+    padding-left: 15px; 
+    padding-top: 15px;
+}
+
+.cell-description{
+    display: inline-flex;
+    padding-left: 15px;
+    font-size: 13px;
+}
+
+.cell-author{
+    position: absolute;
+    font-size: 14px;
+    bottom: 15px;
+    left: 15px;
+}
+
+.cell-icon-div{
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid lightgrey;
+    text-align: center;
+    height: 40px;
+    width: 40px;
+    bottom: 15px;
+    right: 15px;
+}
+
+.cell-icon{
+    line-height: 40px;
+    color: grey;
+}

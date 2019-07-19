@@ -1,10 +1,7 @@
 export const components = {
-    LTable:{
-        name: "LTable",
-        description: "A normal table",
-    },
     LBreadCrumb:{
-        name: "LBreadCrumb",
-        description: "Bread crumb",
-    }
+        name: "Breadcrumb",
+        description: "采用React实现的简单网站路径导航插件",
+        author: "陈天慧"
+    },
 }

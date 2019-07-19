@@ -1,7 +1,7 @@
 import React,{Component} from "react";
 import { render } from "react-dom";
 import {Switch,Route} from "react-router-dom";
-import Home from "../Home/Index";
+import HomeRouter from "../Home/HomeRouter/HomeRouter";
 import About from "../About/Index";
 class Router extends Component{
     constructor(props){
@@ -11,7 +11,7 @@ class Router extends Component{
         return(
             <Switch>
                 <Route path="/about" component={About} />
-                <Route path="/" component={Home} />
+                <Route path="/" component={HomeRouter} />
             </Switch>
         );
     }

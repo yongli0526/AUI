@@ -5,18 +5,28 @@ import Logo from "./Logo";
 import NavigationBar from "./NavigationBar";
 import Router from "../Router/Router";
 import { modules } from "../Common/ModuleName";
+import BreadCrumb from "../Components/BreadCrumb/Index";
 const events = [
-    "selectModuleChanged"
+    "selectModuleChanged",
+    "setBreadCrumb",
 ];
 class Layout extends Component{
     constructor(props){
         super(props);
         this.state = {
             logoSrc:"Images/logo.png",
-            moduleList:[modules.home, modules.about],
+            moduleList:[],
+            showBreadCrumb: false,
+            breadCrumb: [],
+        }
+        for(let key in modules){
+            this.state.moduleList.push(modules[key]);
         }
         this.nbRef = React.createRef();
         events.map(item => this[item] = this[item].bind(this));
+        window.commonUtil = {
+            setBreadCrumb : this.setBreadCrumb
+        };
     }
     componentDidMount(){
         this.reFlushNB();
@@ -51,6 +61,15 @@ class Layout extends Component{
         }
         return str;
     }
+    setBreadCrumb(breadCrumb){
+        if(breadCrumb.length > 0){
+            this.state.showBreadCrumb = true;
+            this.state.breadCrumb = breadCrumb;
+        }
+        else
+            this.state.showBreadCrumb = false;
+        this.setState({});
+    }
     render(){
         return(
             <div className="main-div">
@@ -65,11 +84,15 @@ class Layout extends Component{
                 </div>
 
                 <div className="layout-body">
+                    {
+                        this.state.showBreadCrumb && 
+                        <BreadCrumb breadCrumb={this.state.breadCrumb}/>
+                    }
                     <Router />
                 </div>
 
                 <div className="layout-footer">
-                    <span className="copy-right">Copyright&copy; 2019 Li Yong</span>
+                    <span style={{display:'none'}} className="copy-right">Copyright&copy; 2019 Li Yong</span>
                 </div>
             </div>
         );

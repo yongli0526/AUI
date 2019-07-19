@@ -20,11 +20,11 @@ class Home extends Component{
         this.setState({});
     }
     cellOnClick(item){
-
+        this.props.history.push("/home/" + item.name);
     }
     render(){
         return(
-            <div>
+            <div className="home-body-div">
                 {
                     this.state.cellItems.map(item => 
                         <Cell item={item} itemOnClick={this.cellOnClick}/>
