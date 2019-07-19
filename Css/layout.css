@@ -19,15 +19,16 @@ body{
 }
 
 .layout-header{
-    height: 55px;
-    min-height: 55px;
+    height: 60px;
+    min-height: 60px;
     width: 100%;
-    background-color: lightgray;
+    background-color: #b9b9b8;
     display: flex;
 }
 
 .layout-body{
     height: 100%;
+    background-color:#f0f1f6; 
 }
 
 .layout-footer{
@@ -51,11 +52,21 @@ body{
     height: 100%;
     width: 150px;
     display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .logo-img{
     width: 100%;
     height: 100%;
+}
+
+.logo-a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    line-height: 60px;
 }
 
 .nb{
@@ -70,21 +81,22 @@ body{
 
 .nb-button{
     background-color: transparent;
-    border-radius: 7%;
+    border-radius: 5px;
     border: none;
-    height: 30px;
+    height: 36px;
     padding-left: 15px;
     padding-right: 15px;
     outline: 0px;
+    font-size: 14PX;
 }
 
 .nb-button-selected{
-    background-color: gray;
+    background-color: black;
     color: white;
 }
 
 .nb-button:hover{
-    background-color: gray;
+    background-color: black;
     color: white;
 }
 

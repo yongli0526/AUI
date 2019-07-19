@@ -7,7 +7,8 @@ class Logo extends Component{
     render(){
         return(
             <div className="logo-div">
-                <img className="logo-img" src={this.props.src} />
+                {/*<img className="logo-img" src={this.props.src} />*/}
+                <a className="logo-a" href="./index.html" >AUI Demo</a>
             </div>
         );
     }
